@@ -4,7 +4,7 @@ This script is designed to remove periodic boundary conditions from .gro or .xtc
 
 ## Usage
 ``` tcsh
-./script_name.tcsh [-single filename] [-all]
+./centralize.tcsh [-single filename] [-all]
 ```
 ## Options
 
@@ -16,7 +16,7 @@ This script is designed to remove periodic boundary conditions from .gro or .xtc
 ### Processing a Single File:
 
 ``` tcsh
-./script_name.tcsh -single file.gro
+./centralize.tcsh -single file.gro
 ```
 
 This command will process the specified .gro file.
@@ -24,7 +24,7 @@ This command will process the specified .gro file.
 ### Processing All Files:
 
 ``` tcsh
-./script_name.tcsh -all
+./centralize.tcsh -all
 ```
 
 This command will process all .gro or .xtc files in the current directory.
