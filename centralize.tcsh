@@ -53,10 +53,10 @@ if ( $flag_single == 1 && "$filename" != "" ) then
 	echo 1 0 | gmx_mpi trjconv -s ${NAME}.tpr -f $FILE -o ${NAME}_c.${TYPE} -ur compact -pbc mol -center
 
         # echo "Centering on the protein and extracting only the protein:"
-        # echo 1 1 | gmx_mpi trjconv -s min.tpr -f $FILE -o ${NAME}_Protein_c.${TYPE} -ur compact -pbc mol -center
+        # echo 1 1 | gmx_mpi trjconv -s ${NAME}.tpr -f $FILE -o ${NAME}_Protein_c.${TYPE} -ur compact -pbc mol -center
 
         # echo "Centering on the protein and extracting everything but the water molecules:"
-        # echo 1 17 | gmx_mpi trjconv -s min.tpr -f $FILE -o ${NAME}_non-Water_c.${TYPE} -ur compact -pbc mol -center
+        # echo 1 17 | gmx_mpi trjconv -s ${NAME}.tpr -f $FILE -o ${NAME}_non-Water_c.${TYPE} -ur compact -pbc mol -center
 
     else
         echo "Error: The file specified with '-single' must be a .gro or .xtc file."
@@ -82,10 +82,10 @@ if ( $flag_all == 1 ) then
       echo 1 0 | gmx_mpi trjconv -s {$FILE}.tpr -f $FILE -o ${NAME}_c.${TYPE} -ur compact -pbc mol -center
 
       # echo "Centering on the protein and extracting only the protein:"
-      # echo 1 1 | gmx_mpi trjconv -s min.tpr -f $FILE -o ${NAME}_Protein_c.${TYPE} -ur compact -pbc mol -center
+      # echo 1 1 | gmx_mpi trjconv -s ${NAME}.tpr -f $FILE -o ${NAME}_Protein_c.${TYPE} -ur compact -pbc mol -center
 
       # echo "Centering on the protein and extracting everything but the water molecules:"
-      # echo 1 17 | gmx_mpi trjconv -s min.tpr -f $FILE -o ${NAME}_non-Water_c.${TYPE} -ur compact -pbc mol -center
+      # echo 1 17 | gmx_mpi trjconv -s ${NAME}.tpr -f $FILE -o ${NAME}_non-Water_c.${TYPE} -ur compact -pbc mol -center
 
     end
 
