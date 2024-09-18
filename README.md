@@ -19,7 +19,14 @@ This script is designed to remove periodic boundary conditions from .gro or .xtc
 ./centralize.tcsh -single file.gro
 ```
 
-This command will process the specified .gro file.
+This command will process the specified .gro coordinate file.
+
+
+``` tcsh
+./centralize.tcsh -single file.xtc
+```
+
+This command will process the specified .xtc trajectory file.
 
 ### Processing All Files:
 
