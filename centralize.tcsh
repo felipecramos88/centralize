@@ -78,7 +78,7 @@ if ( $flag_all == 1 ) then
       echo $NAME
       echo $TYPE
 
-      # Centering on the protein and extracting the entire system:
+      echo "Centering on the protein and extracting the entire system:"
       echo 1 0 | gmx_mpi trjconv -s {$NAME}.tpr -f $FILE -o ${NAME}_c.${TYPE} -ur compact -pbc mol -center
 
       # echo "Centering on the protein and extracting only the protein:"
